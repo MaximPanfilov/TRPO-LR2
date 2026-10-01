@@ -54,31 +54,91 @@
                     <h1 class="modulename">
 calculator    </h1>
 
-                
+                        <div class="docstring"><p>Модуль арифметических операций.</p>
+
+<p>Содержит базовые функции для сложения, вычитания, умножения,
+деления и возведения в степень.</p>
+</div>
+
                         <input id="mod-calculator-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
                         <label class="view-source-button" for="mod-calculator-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a>
-</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
-</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="k">def</span><span class="w"> </span><span class="nf">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="sd">"""Модуль арифметических операций.</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">Содержит базовые функции для сложения, вычитания, умножения,</span>
+</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="sd">деления и возведения в степень.</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="sd">"""</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>
 </span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>
-</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>
-</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>
-</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>
-</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Деление на ноль невозможно"</span><span class="p">)</span>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a>
-</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>
-</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="k">def</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span>
+</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="w">    </span><span class="sd">"""Возвращает сумму двух чисел.</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>
+</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="sd">    Args:</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a><span class="sd">        a: Первое слагаемое.</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="sd">        b: Второе слагаемое.</span>
+</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>
+</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a><span class="sd">    Returns:</span>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="sd">        Результат сложения a + b.</span>
+</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">    """</span>
+</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a>
+</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>
+</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="k">def</span><span class="w"> </span><span class="nf">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="w">    </span><span class="sd">"""Возвращает разность двух чисел.</span>
+</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a>
+</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="sd">    Args:</span>
+</span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a><span class="sd">        a: Уменьшаемое.</span>
+</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a><span class="sd">        b: Вычитаемое.</span>
+</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>
+</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a><span class="sd">    Returns:</span>
+</span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a><span class="sd">        Результат вычитания a - b.</span>
+</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a><span class="sd">    """</span>
+</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+</span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a>
+</span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a>
+</span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a><span class="w">    </span><span class="sd">"""Возвращает произведение двух чисел.</span>
+</span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a>
+</span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a><span class="sd">    Args:</span>
+</span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a><span class="sd">        a: Первый множитель.</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a><span class="sd">        b: Второй множитель.</span>
+</span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a>
+</span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a><span class="sd">    Returns:</span>
+</span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a><span class="sd">        Результат умножения a * b.</span>
+</span><span id="L-43"><a href="#L-43"><span class="linenos">43</span></a><span class="sd">    """</span>
+</span><span id="L-44"><a href="#L-44"><span class="linenos">44</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a>
+</span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>
+</span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a><span class="w">    </span><span class="sd">"""Возвращает частное от деления двух чисел.</span>
+</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>
+</span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a><span class="sd">    Args:</span>
+</span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a><span class="sd">        a: Делимое.</span>
+</span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a><span class="sd">        b: Делитель.</span>
+</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a>
+</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a><span class="sd">    Returns:</span>
+</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a><span class="sd">        Результат деления a / b.</span>
+</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a>
+</span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a><span class="sd">    Raises:</span>
+</span><span id="L-58"><a href="#L-58"><span class="linenos">58</span></a><span class="sd">        ValueError: Если b равно нулю.</span>
+</span><span id="L-59"><a href="#L-59"><span class="linenos">59</span></a><span class="sd">    """</span>
+</span><span id="L-60"><a href="#L-60"><span class="linenos">60</span></a>    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="L-61"><a href="#L-61"><span class="linenos">61</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Деление на ноль невозможно"</span><span class="p">)</span>
+</span><span id="L-62"><a href="#L-62"><span class="linenos">62</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a>
+</span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a>
+</span><span id="L-65"><a href="#L-65"><span class="linenos">65</span></a><span class="k">def</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="L-66"><a href="#L-66"><span class="linenos">66</span></a><span class="w">    </span><span class="sd">"""Возводит число a в степень b.</span>
+</span><span id="L-67"><a href="#L-67"><span class="linenos">67</span></a>
+</span><span id="L-68"><a href="#L-68"><span class="linenos">68</span></a><span class="sd">    Args:</span>
+</span><span id="L-69"><a href="#L-69"><span class="linenos">69</span></a><span class="sd">        a: Основание степени.</span>
+</span><span id="L-70"><a href="#L-70"><span class="linenos">70</span></a><span class="sd">        b: Показатель степени.</span>
+</span><span id="L-71"><a href="#L-71"><span class="linenos">71</span></a>
+</span><span id="L-72"><a href="#L-72"><span class="linenos">72</span></a><span class="sd">    Returns:</span>
+</span><span id="L-73"><a href="#L-73"><span class="linenos">73</span></a><span class="sd">        Результат возведения a в степень b.</span>
+</span><span id="L-74"><a href="#L-74"><span class="linenos">74</span></a><span class="sd">    """</span>
+</span><span id="L-75"><a href="#L-75"><span class="linenos">75</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span>
 </span></pre></div>
 
 
@@ -94,12 +154,30 @@ calculator    </h1>
 
     </div>
     <a class="headerlink" href="#add"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="add-2"><a href="#add-2"><span class="linenos">2</span></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="add-3"><a href="#add-3"><span class="linenos">3</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="add-9"><a href="#add-9"><span class="linenos"> 9</span></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="add-10"><a href="#add-10"><span class="linenos">10</span></a><span class="w">    </span><span class="sd">"""Возвращает сумму двух чисел.</span>
+</span><span id="add-11"><a href="#add-11"><span class="linenos">11</span></a>
+</span><span id="add-12"><a href="#add-12"><span class="linenos">12</span></a><span class="sd">    Args:</span>
+</span><span id="add-13"><a href="#add-13"><span class="linenos">13</span></a><span class="sd">        a: Первое слагаемое.</span>
+</span><span id="add-14"><a href="#add-14"><span class="linenos">14</span></a><span class="sd">        b: Второе слагаемое.</span>
+</span><span id="add-15"><a href="#add-15"><span class="linenos">15</span></a>
+</span><span id="add-16"><a href="#add-16"><span class="linenos">16</span></a><span class="sd">    Returns:</span>
+</span><span id="add-17"><a href="#add-17"><span class="linenos">17</span></a><span class="sd">        Результат сложения a + b.</span>
+</span><span id="add-18"><a href="#add-18"><span class="linenos">18</span></a><span class="sd">    """</span>
+</span><span id="add-19"><a href="#add-19"><span class="linenos">19</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Возвращает сумму двух чисел.</p>
+
+<p>Args:
+    a: Первое слагаемое.
+    b: Второе слагаемое.</p>
+
+<p>Returns:
+    Результат сложения a + b.</p>
+</div>
+
 
                 </section>
                 <section id="subtract">
@@ -113,12 +191,30 @@ calculator    </h1>
 
     </div>
     <a class="headerlink" href="#subtract"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="subtract-6"><a href="#subtract-6"><span class="linenos">6</span></a><span class="k">def</span><span class="w"> </span><span class="nf">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="subtract-7"><a href="#subtract-7"><span class="linenos">7</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="subtract-22"><a href="#subtract-22"><span class="linenos">22</span></a><span class="k">def</span><span class="w"> </span><span class="nf">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="subtract-23"><a href="#subtract-23"><span class="linenos">23</span></a><span class="w">    </span><span class="sd">"""Возвращает разность двух чисел.</span>
+</span><span id="subtract-24"><a href="#subtract-24"><span class="linenos">24</span></a>
+</span><span id="subtract-25"><a href="#subtract-25"><span class="linenos">25</span></a><span class="sd">    Args:</span>
+</span><span id="subtract-26"><a href="#subtract-26"><span class="linenos">26</span></a><span class="sd">        a: Уменьшаемое.</span>
+</span><span id="subtract-27"><a href="#subtract-27"><span class="linenos">27</span></a><span class="sd">        b: Вычитаемое.</span>
+</span><span id="subtract-28"><a href="#subtract-28"><span class="linenos">28</span></a>
+</span><span id="subtract-29"><a href="#subtract-29"><span class="linenos">29</span></a><span class="sd">    Returns:</span>
+</span><span id="subtract-30"><a href="#subtract-30"><span class="linenos">30</span></a><span class="sd">        Результат вычитания a - b.</span>
+</span><span id="subtract-31"><a href="#subtract-31"><span class="linenos">31</span></a><span class="sd">    """</span>
+</span><span id="subtract-32"><a href="#subtract-32"><span class="linenos">32</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Возвращает разность двух чисел.</p>
+
+<p>Args:
+    a: Уменьшаемое.
+    b: Вычитаемое.</p>
+
+<p>Returns:
+    Результат вычитания a - b.</p>
+</div>
+
 
                 </section>
                 <section id="multiply">
@@ -132,12 +228,30 @@ calculator    </h1>
 
     </div>
     <a class="headerlink" href="#multiply"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="multiply-10"><a href="#multiply-10"><span class="linenos">10</span></a><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="multiply-11"><a href="#multiply-11"><span class="linenos">11</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="multiply-35"><a href="#multiply-35"><span class="linenos">35</span></a><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="multiply-36"><a href="#multiply-36"><span class="linenos">36</span></a><span class="w">    </span><span class="sd">"""Возвращает произведение двух чисел.</span>
+</span><span id="multiply-37"><a href="#multiply-37"><span class="linenos">37</span></a>
+</span><span id="multiply-38"><a href="#multiply-38"><span class="linenos">38</span></a><span class="sd">    Args:</span>
+</span><span id="multiply-39"><a href="#multiply-39"><span class="linenos">39</span></a><span class="sd">        a: Первый множитель.</span>
+</span><span id="multiply-40"><a href="#multiply-40"><span class="linenos">40</span></a><span class="sd">        b: Второй множитель.</span>
+</span><span id="multiply-41"><a href="#multiply-41"><span class="linenos">41</span></a>
+</span><span id="multiply-42"><a href="#multiply-42"><span class="linenos">42</span></a><span class="sd">    Returns:</span>
+</span><span id="multiply-43"><a href="#multiply-43"><span class="linenos">43</span></a><span class="sd">        Результат умножения a * b.</span>
+</span><span id="multiply-44"><a href="#multiply-44"><span class="linenos">44</span></a><span class="sd">    """</span>
+</span><span id="multiply-45"><a href="#multiply-45"><span class="linenos">45</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Возвращает произведение двух чисел.</p>
+
+<p>Args:
+    a: Первый множитель.
+    b: Второй множитель.</p>
+
+<p>Returns:
+    Результат умножения a * b.</p>
+</div>
+
 
                 </section>
                 <section id="divide">
@@ -151,14 +265,38 @@ calculator    </h1>
 
     </div>
     <a class="headerlink" href="#divide"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="divide-14"><a href="#divide-14"><span class="linenos">14</span></a><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="divide-15"><a href="#divide-15"><span class="linenos">15</span></a>    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="divide-16"><a href="#divide-16"><span class="linenos">16</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Деление на ноль невозможно"</span><span class="p">)</span>
-</span><span id="divide-17"><a href="#divide-17"><span class="linenos">17</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="divide-48"><a href="#divide-48"><span class="linenos">48</span></a><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="divide-49"><a href="#divide-49"><span class="linenos">49</span></a><span class="w">    </span><span class="sd">"""Возвращает частное от деления двух чисел.</span>
+</span><span id="divide-50"><a href="#divide-50"><span class="linenos">50</span></a>
+</span><span id="divide-51"><a href="#divide-51"><span class="linenos">51</span></a><span class="sd">    Args:</span>
+</span><span id="divide-52"><a href="#divide-52"><span class="linenos">52</span></a><span class="sd">        a: Делимое.</span>
+</span><span id="divide-53"><a href="#divide-53"><span class="linenos">53</span></a><span class="sd">        b: Делитель.</span>
+</span><span id="divide-54"><a href="#divide-54"><span class="linenos">54</span></a>
+</span><span id="divide-55"><a href="#divide-55"><span class="linenos">55</span></a><span class="sd">    Returns:</span>
+</span><span id="divide-56"><a href="#divide-56"><span class="linenos">56</span></a><span class="sd">        Результат деления a / b.</span>
+</span><span id="divide-57"><a href="#divide-57"><span class="linenos">57</span></a>
+</span><span id="divide-58"><a href="#divide-58"><span class="linenos">58</span></a><span class="sd">    Raises:</span>
+</span><span id="divide-59"><a href="#divide-59"><span class="linenos">59</span></a><span class="sd">        ValueError: Если b равно нулю.</span>
+</span><span id="divide-60"><a href="#divide-60"><span class="linenos">60</span></a><span class="sd">    """</span>
+</span><span id="divide-61"><a href="#divide-61"><span class="linenos">61</span></a>    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="divide-62"><a href="#divide-62"><span class="linenos">62</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Деление на ноль невозможно"</span><span class="p">)</span>
+</span><span id="divide-63"><a href="#divide-63"><span class="linenos">63</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Возвращает частное от деления двух чисел.</p>
+
+<p>Args:
+    a: Делимое.
+    b: Делитель.</p>
+
+<p>Returns:
+    Результат деления a / b.</p>
+
+<p>Raises:
+    ValueError: Если b равно нулю.</p>
+</div>
+
 
                 </section>
                 <section id="power">
@@ -172,12 +310,30 @@ calculator    </h1>
 
     </div>
     <a class="headerlink" href="#power"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="power-20"><a href="#power-20"><span class="linenos">20</span></a><span class="k">def</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="power-21"><a href="#power-21"><span class="linenos">21</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="power-66"><a href="#power-66"><span class="linenos">66</span></a><span class="k">def</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="power-67"><a href="#power-67"><span class="linenos">67</span></a><span class="w">    </span><span class="sd">"""Возводит число a в степень b.</span>
+</span><span id="power-68"><a href="#power-68"><span class="linenos">68</span></a>
+</span><span id="power-69"><a href="#power-69"><span class="linenos">69</span></a><span class="sd">    Args:</span>
+</span><span id="power-70"><a href="#power-70"><span class="linenos">70</span></a><span class="sd">        a: Основание степени.</span>
+</span><span id="power-71"><a href="#power-71"><span class="linenos">71</span></a><span class="sd">        b: Показатель степени.</span>
+</span><span id="power-72"><a href="#power-72"><span class="linenos">72</span></a>
+</span><span id="power-73"><a href="#power-73"><span class="linenos">73</span></a><span class="sd">    Returns:</span>
+</span><span id="power-74"><a href="#power-74"><span class="linenos">74</span></a><span class="sd">        Результат возведения a в степень b.</span>
+</span><span id="power-75"><a href="#power-75"><span class="linenos">75</span></a><span class="sd">    """</span>
+</span><span id="power-76"><a href="#power-76"><span class="linenos">76</span></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Возводит число a в степень b.</p>
+
+<p>Args:
+    a: Основание степени.
+    b: Показатель степени.</p>
+
+<p>Returns:
+    Результат возведения a в степень b.</p>
+</div>
+
 
                 </section>
     </main>
